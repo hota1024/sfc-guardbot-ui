@@ -16,13 +16,7 @@ export const Background: React.VFC<BackgroundProps> = (props) => {
   return (
     <>
       <ResponsiveBlobBackground />
-      <div
-        style={{
-          position: 'absolute',
-        }}
-      >
-        {children}
-      </div>
+      {children}
     </>
   )
 }
