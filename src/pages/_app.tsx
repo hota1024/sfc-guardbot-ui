@@ -3,6 +3,10 @@ import { globalCss } from '@stitches/react'
 import type { AppProps } from 'next/app'
 
 const globalStyles = globalCss({
+  body: {
+    fontFamily: `'Noto Sans JP', sans-serif;`,
+    color: 'white',
+  },
   '*': { margin: 0, padding: 0, boxSizing: 'border-box' },
 })
 
