@@ -1,5 +1,19 @@
 import { createStitches } from '@stitches/react'
 
+const createSpacingMap = (start: number, step: number, length: number) => {
+  let map: { [key: number]: number } = {}
+
+  for (let i = 0; i < length; i++) {
+    map[i] = start + i * step
+  }
+
+  return map
+}
+
+const space = createSpacingMap(-16, 8, 32)
+
+export const mapSpace = <T>(fn: () => T): T => {}
+
 export const {
   config,
   createTheme,
@@ -16,6 +30,7 @@ export const {
       blue: '#5865F2',
       black: '#23272A',
     },
+    space,
   },
   media: {
     xs: '(max-width: 599px)',
